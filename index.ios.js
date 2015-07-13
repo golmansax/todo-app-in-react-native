@@ -46,7 +46,7 @@ var TodoApp = React.createClass({
     }, 500);
   },
 
-  render: function() {
+  render: function () {
     if (!this.state.loaded) {
       return this._renderLoadingView();
     }

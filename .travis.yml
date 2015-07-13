@@ -1,0 +1,9 @@
+sudo: false
+language: node_js
+node_js: '0.12'
+script:
+- make travis-lint
+- make jscs
+cache:
+  directories:
+  - node_modules

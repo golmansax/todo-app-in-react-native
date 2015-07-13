@@ -5,6 +5,11 @@
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
+  "devDependencies": {
+    "esprima-fb": "15001.1.0-dev-harmony-fb",
+    "jscs": "latest",
+    "travis-lint": "latest"
+  },
   "dependencies": {
     "react-native": "^0.5.0"
   }
