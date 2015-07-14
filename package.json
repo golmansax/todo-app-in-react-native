@@ -1,12 +1,29 @@
 {
   "name": "TodoApp",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "./node_modules/react-native/packager/packager.sh",
+    "test": "./node_modules/.bin/jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "jestSupport/scriptPreprocess.js",
+    "setupEnvScriptFile": "jestSupport/env.js",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "packager/react-packager/src/Activity/"
+    ],
+    "testFileExtensions": [
+      "js"
+    ],
+    "unmockedModulePathPatterns": [
+      "promise",
+      "source-map"
+    ]
   },
   "devDependencies": {
+    "babel-jest": "latest",
     "esprima-fb": "15001.1.0-dev-harmony-fb",
+    "jest-cli": "latest",
     "jscs": "latest",
     "travis-lint": "latest"
   },
