@@ -15,7 +15,7 @@
 // WARNING: This is an optimized version that fails on hasOwnProperty checks
 // and non objects. It's not spec-compliant. It's a perf optimization.
 
-Object.assign = function(target, sources) {
+Object.assign = function (target, sources) {
   if (__DEV__) {
     if (target == null) {
       throw new TypeError('Object.assign target cannot be null or undefined');
