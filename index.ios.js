@@ -13,19 +13,8 @@ var {
   ListView,
   View,
 } = React;
+var { getAll } = require('./todos/store');
 
-var MOCKED_TODO_DATA = [
-  {
-    name: 'Watch Wimbledon Final',
-    date: 'Jul 12 2015',
-    image: 'http://www.hdicon.com/wp-content/uploads/2010/06/Wimbledon.png',
-  },
-  {
-    name: 'Finish React Native Tutorial',
-    date: 'Aug 12 2015',
-    image: 'http://facebook.github.io/react/img/logo_og.png',
-  },
-];
 
 var TodoApp = React.createClass({
   getInitialState: function () {
@@ -40,7 +29,7 @@ var TodoApp = React.createClass({
   componentDidMount: function () {
     setTimeout(() => {
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(MOCKED_TODO_DATA),
+        dataSource: this.state.dataSource.cloneWithRows(getAll()),
         loaded: true,
       });
     }, 500);
