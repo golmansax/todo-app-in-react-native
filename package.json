@@ -11,6 +11,7 @@
     "travis-lint": "latest"
   },
   "dependencies": {
-    "react-native": "^0.5.0"
+    "react-native": "latest",
+    "react-native-button": "latest"
   }
 }

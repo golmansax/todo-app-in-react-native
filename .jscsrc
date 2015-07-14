@@ -10,7 +10,9 @@
 
   "disallowSpacesInsideObjectBrackets": null,
 
-  "requireCommaBeforeLineBreak": true,
+  "requireTrailingComma": {
+    "ignoreSingleLine": true
+  },
 
   "requireSpaceBeforeObjectValues": true,
 
