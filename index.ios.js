@@ -14,7 +14,7 @@ class TodoApp extends React.Component {
         style={{ flex: 1 }}
         initialRoute={{
           title: 'Todo List',
-          component: TodoIndexRoute,
+          component: TodoIndexRoute
         }}
       />
     );

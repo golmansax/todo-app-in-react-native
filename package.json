@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "react-native": "latest",
-    "react-native-button": "latest"
+    "react-native-button": "latest",
+    "react-native-icons": "latest"
   }
 }
