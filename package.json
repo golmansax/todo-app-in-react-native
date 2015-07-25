@@ -23,7 +23,7 @@
   "devDependencies": {
     "babel-jest": "latest",
     "esprima-fb": "15001.1.0-dev-harmony-fb",
-    "jest-cli": "latest",
+    "jest-cli": "0.4.x",
     "jscs": "latest",
     "travis-lint": "latest"
   },
