@@ -11,7 +11,6 @@ var {
 } = React;
 var Button = require('react-native-button');
 var { getAll } = require('./store');
-var { Icon } = require('react-native-icons');
 
 class TodosIndexRoute extends React.Component {
   constructor() {
@@ -48,12 +47,6 @@ class TodosIndexRoute extends React.Component {
         <Button style={styles.addButton}>
           Add Todo
         </Button>
-        <Icon
-          name='fontawesome|facebook-square'
-          size={70}
-          color='#3b5998'
-          style={styles.facebook}
-        />
       </View>
     );
   }
@@ -111,11 +104,6 @@ var styles = StyleSheet.create({
     padding: 10,
     backgroundColor: 'red',
     color: 'white',
-  },
-  facebook: {
-    width: 70,
-    height: 70,
-    margin: 10,
   },
 });
 
