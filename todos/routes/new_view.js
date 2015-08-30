@@ -10,9 +10,8 @@ var {
   View,
 } = React;
 var Button = require('react-native-button');
-var { getAll } = require('./store');
 
-class TodosNewRoute extends React.Component {
+class TodosNewView extends React.Component {
   render() {
     return (
       <Text>
@@ -22,4 +21,4 @@ class TodosNewRoute extends React.Component {
   }
 }
 
-module.exports = TodosNewRoute;
+module.exports = TodosNewView;

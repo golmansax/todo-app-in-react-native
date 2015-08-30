@@ -7,7 +7,7 @@ var {
 } = React;
 var NavBar = require('react-native-navbar');
 var { Icon } = require('react-native-icons');
-var TodoNewRoute = require('./new_route');
+var TodoRoutes = require('./routes');
 
 class TodoAddIcon extends React.Component {
   constructor(props) {
@@ -29,16 +29,7 @@ class TodoAddIcon extends React.Component {
   }
 
   _navigateToAdd() {
-    this.props.navigator.push({
-      title: 'Add Todo',
-      component: TodoNewRoute,
-      navBar: (
-        <NavBar
-          title='Add Todo'
-          customNext={<TodoAddIcon />}
-        />
-      ),
-    });
+    this.props.navigator.push(TodoRoutes.new);
   }
 }
 

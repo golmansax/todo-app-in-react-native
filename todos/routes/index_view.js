@@ -10,9 +10,9 @@ var {
   View,
 } = React;
 var Button = require('react-native-button');
-var { getAll } = require('./store');
+var { getAll } = require('../store');
 
-class TodosIndexRoute extends React.Component {
+class TodosIndexView extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -107,4 +107,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = TodosIndexRoute;
+module.exports = TodosIndexView;
