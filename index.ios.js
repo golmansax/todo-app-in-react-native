@@ -9,7 +9,7 @@ var {
 } = React;
 var NavBar = require('react-native-navbar');
 var TodoIndexRoute = require('./todos/index_route');
-var { Icon } = require('react-native-icons');
+var TodoAddIcon = require('./todos/add_icon');
 
 class TodoApp extends React.Component {
   render() {
@@ -21,14 +21,7 @@ class TodoApp extends React.Component {
           navBar: (
             <NavBar
               title='I like Todos'
-              customNext={
-                <Icon
-                  name='fontawesome|plus'
-                  size={30}
-                  color='#3b5998'
-                  style={styles.plus}
-                />
-              }
+              customNext={<TodoAddIcon />}
             />
           ),
         }}
@@ -54,13 +47,5 @@ class TodoApp extends React.Component {
     );
   }
 }
-
-var styles = StyleSheet.create({
-  plus: {
-    width: 50,
-    height: 50,
-    top: 5,
-  },
-});
 
 AppRegistry.registerComponent('TodoApp', () => TodoApp);
