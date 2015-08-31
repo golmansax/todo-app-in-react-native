@@ -1,5 +1,3 @@
-'use strict';
-
 var MOCKED_TODO_DATA = [
   {
     name: 'Watch Wimbledon Final',

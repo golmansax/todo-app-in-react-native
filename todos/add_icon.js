@@ -1,13 +1,18 @@
-'use strict';
-
 var React = require('react-native');
 var {
   StyleSheet,
   TouchableHighlight,
 } = React;
-var NavBar = require('react-native-navbar');
 var { Icon } = require('react-native-icons');
 var TodoRoutes = require('./routes');
+
+var styles = StyleSheet.create({
+  plus: {
+    width: 50,
+    height: 50,
+    top: 5,
+  },
+});
 
 class TodoAddIcon extends React.Component {
   constructor(props) {
@@ -33,12 +38,8 @@ class TodoAddIcon extends React.Component {
   }
 }
 
-var styles = StyleSheet.create({
-  plus: {
-    width: 50,
-    height: 50,
-    top: 5,
-  },
-});
+TodoAddIcon.propTypes = {
+  navigator: React.PropTypes.object.isRequired,
+};
 
-module.exports = TodoAddIcon
+module.exports = TodoAddIcon;

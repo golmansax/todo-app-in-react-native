@@ -3,7 +3,7 @@ language: node_js
 node_js: '0.12'
 script:
 - make travis-lint
-- make jscs
+- make eslint
 - npm test
 cache:
   directories:

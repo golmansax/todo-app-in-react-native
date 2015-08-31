@@ -1,10 +1,7 @@
-'use strict';
-
 var React = require('react-native');
 var {
   StyleSheet,
   Text,
-  TouchableHighlight,
   Image,
   ListView,
   View,
@@ -12,9 +9,44 @@ var {
 var Button = require('react-native-button');
 var { getAll } = require('../store');
 
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  rightContainer: {
+    flex: 1,
+  },
+  name: {
+    fontSize: 20,
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  date: {
+    textAlign: 'center',
+  },
+  thumbnail: {
+    width: 50,
+    height: 50,
+  },
+  listView: {
+    paddingTop: 20,
+    backgroundColor: '#F5FCFF',
+  },
+  addButton: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: 'red',
+    color: 'white',
+  },
+});
+
 class TodosIndexView extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
@@ -71,40 +103,5 @@ class TodosIndexView extends React.Component {
     );
   }
 }
-
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  rightContainer: {
-    flex: 1,
-  },
-  name: {
-    fontSize: 20,
-    textAlign: 'center',
-    marginBottom: 8,
-  },
-  date: {
-    textAlign: 'center',
-  },
-  thumbnail: {
-    width: 50,
-    height: 50,
-  },
-  listView: {
-    paddingTop: 20,
-    backgroundColor: '#F5FCFF',
-  },
-  addButton: {
-    flex: 1,
-    padding: 10,
-    backgroundColor: 'red',
-    color: 'white',
-  },
-});
 
 module.exports = TodosIndexView;

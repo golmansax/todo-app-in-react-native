@@ -1,15 +1,5 @@
-'use strict';
-
 var React = require('react-native');
-var {
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  Image,
-  ListView,
-  View,
-} = React;
-var Button = require('react-native-button');
+var { Text } = React;
 
 class TodosNewView extends React.Component {
   render() {

@@ -1,7 +1,7 @@
-.PHONY: travis-lint jscs
+.PHONY: travis-lint eslint
 
 travis-lint:
 	./node_modules/.bin/travis-lint .travis.yml
 
-jscs:
-	./node_modules/.bin/jscs . --esprima=esprima-fb
+eslint:
+	./node_modules/.bin/eslint . --ext .js --ext .jsx

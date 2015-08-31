@@ -1,15 +1,10 @@
-'use strict';
-
 var React = require('react-native');
 var {
-  StyleSheet,
   View,
   AppRegistry,
   Navigator,
 } = React;
-var NavBar = require('react-native-navbar');
 var TodoRoutes = require('./todos/routes');
-var TodoAddIcon = require('./todos/add_icon');
 
 class TodoApp extends React.Component {
   render() {

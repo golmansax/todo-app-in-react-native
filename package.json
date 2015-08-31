@@ -21,10 +21,12 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "*",
     "babel-jest": "latest",
-    "esprima-fb": "15001.1.0-dev-harmony-fb",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-react": "*",
     "jest-cli": "0.4.x",
-    "jscs": "latest",
     "travis-lint": "latest"
   },
   "dependencies": {

@@ -1,10 +1,8 @@
-'use strict';
-
 jest.dontMock('../store');
 
-describe('TodosStore', function () {
-  describe('.getAll', function () {
-    it('returns 2 objects', function () {
+describe('TodosStore', () => {
+  describe('.getAll', () => {
+    it('returns 2 objects', () => {
       var TodosStore = require('../store');
       expect(TodosStore.getAll().length).toBe(2);
     });
