@@ -21,11 +21,9 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "*",
     "babel-jest": "latest",
     "eslint": "*",
-    "eslint-config-airbnb": "*",
-    "eslint-plugin-react": "*",
+    "eslint-config-golmansax": "*",
     "jest-cli": "0.4.x",
     "travis-lint": "latest"
   },
