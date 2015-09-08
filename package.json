@@ -43,6 +43,7 @@
     "react-native-icons": "*",
     "react-native-navbar": "*",
     "react-router": "*",
+    "style-loader": "*",
     "webpack": "*",
     "webpack-dev-server": "*"
   }

@@ -4,7 +4,7 @@ module.exports = {
 
   output: {
     path: './build',
-    filename: "bundle.js",
+    filename: 'bundle.js',
     publicPath: '/build/',
   },
 
@@ -20,6 +20,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel?optional[]=runtime',
       },
+      { test: /\.css$/, loader: 'style-loader!css-loader?modules' },
     ],
   },
 };
