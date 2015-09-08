@@ -1,6 +1,6 @@
 module.exports = {
   context: __dirname,
-  entry: './entry.jsx',
+  entry: './entry.js',
 
   output: {
     path: './build',
@@ -10,11 +10,6 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        loader: 'babel?optional[]=runtime',
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,

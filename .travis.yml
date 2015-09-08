@@ -5,6 +5,7 @@ script:
 - make travis-lint
 - make eslint
 - npm test
+- npm run build-web
 cache:
   directories:
   - node_modules
