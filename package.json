@@ -2,7 +2,8 @@
   "name": "TodoApp",
   "version": "0.0.1",
   "scripts": {
-    "start": "./node_modules/react-native/packager/packager.sh",
+    "start-ios": "./node_modules/react-native/packager/packager.sh",
+    "start-web": "nodemon web/index.js -e js,jsx,json",
     "test": "./node_modules/.bin/jest"
   },
   "jest": {
@@ -28,6 +29,9 @@
     "travis-lint": "latest"
   },
   "dependencies": {
+    "babel": "latest",
+    "express": "latest",
+    "react": "latest",
     "react-native": "latest",
     "react-native-button": "latest",
     "react-native-icons": "latest",
