@@ -11,9 +11,7 @@ if (env === 'development') {
   const proxy = httpProxy.createProxyServer();
 
   server.all('/build/*', (req, res) => {
-    proxy.web(req, res, {
-      target: 'http://localhost:8080'
-    });
+    proxy.web(req, res, { target: 'http://localhost:8080' });
   });
 }
 

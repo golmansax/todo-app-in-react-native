@@ -24,24 +24,26 @@
     ]
   },
   "devDependencies": {
-    "babel-jest": "latest",
+    "babel-jest": "*",
     "eslint": "*",
     "eslint-config-golmansax": "*",
     "http-proxy": "*",
     "jest-cli": "0.4.x",
-    "travis-lint": "latest"
+    "travis-lint": "*"
   },
   "dependencies": {
-    "babel": "latest",
-    "babel-loader": "latest",
-    "css-loader": "latest",
-    "express": "latest",
-    "react": "latest",
-    "react-native": "latest",
-    "react-native-button": "latest",
-    "react-native-icons": "latest",
-    "react-native-navbar": "latest",
-    "webpack": "latest",
-    "webpack-dev-server": "latest"
+    "babel": "*",
+    "babel-loader": "*",
+    "babel-runtime": "*",
+    "css-loader": "*",
+    "express": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-button": "*",
+    "react-native-icons": "*",
+    "react-native-navbar": "*",
+    "react-router": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
   }
 }

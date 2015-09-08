@@ -1,10 +1,25 @@
 module.exports = {
   context: __dirname,
-  entry: './entry.js',
+  entry: './entry.jsx',
 
   output: {
     path: './build',
     filename: "bundle.js",
-    publicPath: '/build/'
-  }
+    publicPath: '/build/',
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: 'babel?optional[]=runtime',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel?optional[]=runtime',
+      },
+    ],
+  },
 };

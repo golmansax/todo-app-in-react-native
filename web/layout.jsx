@@ -19,7 +19,7 @@ export default class Layout extends React.Component {
           <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
         </head>
         <body>
-          Hello, World!
+          <div id='content' />
           <script type='text/javascript' src='/build/bundle.js' />
         </body>
       </html>
