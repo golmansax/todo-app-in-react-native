@@ -2,9 +2,11 @@
   "name": "TodoApp",
   "version": "0.0.1",
   "scripts": {
-    "start-ios": "./node_modules/react-native/packager/packager.sh",
-    "start-web": "nodemon web/index.js -e js,jsx,json",
-    "test": "./node_modules/.bin/jest"
+    "build-web": "./node_modules/.bin/webpack --config web/webpack.config.js --progress --colors",
+    "start-web": "nodemon web/index.js -e js,jsx,json --watch web --watch shared",
+    "test": "./node_modules/.bin/jest",
+    "watch-ios": "./node_modules/react-native/packager/packager.sh",
+    "watch-web": "./node_modules/.bin/webpack-dev-server --config web/webpack.config.js --content-base web/public/build --progress --colors"
   },
   "jest": {
     "scriptPreprocessor": "jestSupport/scriptPreprocess.js",
@@ -25,16 +27,21 @@
     "babel-jest": "latest",
     "eslint": "*",
     "eslint-config-golmansax": "*",
+    "http-proxy": "*",
     "jest-cli": "0.4.x",
     "travis-lint": "latest"
   },
   "dependencies": {
     "babel": "latest",
+    "babel-loader": "latest",
+    "css-loader": "latest",
     "express": "latest",
     "react": "latest",
     "react-native": "latest",
     "react-native-button": "latest",
     "react-native-icons": "latest",
-    "react-native-navbar": "latest"
+    "react-native-navbar": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
   }
 }
