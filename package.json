@@ -37,6 +37,7 @@
     "babel-runtime": "*",
     "css-loader": "*",
     "express": "*",
+    "extract-text-webpack-plugin": "*",
     "react": "*",
     "react-native": "*",
     "react-native-button": "*",

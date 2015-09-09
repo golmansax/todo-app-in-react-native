@@ -15,6 +15,7 @@ export default class Layout extends React.Component {
             href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
             rel='stylesheet'
           />
+          <link href='/build/bundle.css' rel='stylesheet' />
           <meta name='viewport' content='width=device-width, user-scalable=no' />
           <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
         </head>
