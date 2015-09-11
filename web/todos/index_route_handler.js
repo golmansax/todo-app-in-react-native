@@ -1,6 +1,6 @@
 import React from 'react';
 import TodosStore from '../../shared/todos/store';
-import styles from './index_route_handler.css';
+import styles from './index_route_handler.styl';
 
 export default class TodosIndexRouteHandler extends React.Component {
   constructor(props) {

@@ -35,9 +35,11 @@
     "babel": "*",
     "babel-loader": "*",
     "babel-runtime": "*",
+    "bootstrap-styl": "*",
     "css-loader": "*",
     "express": "*",
     "extract-text-webpack-plugin": "*",
+    "file-loader": "*",
     "react": "*",
     "react-native": "*",
     "react-native-button": "*",
@@ -45,6 +47,8 @@
     "react-native-navbar": "*",
     "react-router": "*",
     "style-loader": "*",
+    "stylus-loader": "*",
+    "url-loader": "*",
     "webpack": "*",
     "webpack-dev-server": "*"
   }
