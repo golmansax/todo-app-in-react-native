@@ -1,5 +1,6 @@
 import React from 'react';
 import TodosStore from '../../shared/todos/store';
+import Grid from '../components/grid';
 import styles from './index_route_handler.styl';
 
 export default class TodosIndexRouteHandler extends React.Component {
@@ -10,9 +11,9 @@ export default class TodosIndexRouteHandler extends React.Component {
 
   render() {
     return (
-      <div className={styles.todosList}>
+      <Grid className={styles.todosList}>
         {this.state.todos.map(this._renderTodo)}
-      </div>
+      </Grid>
     );
   }
 

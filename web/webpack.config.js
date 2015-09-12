@@ -1,7 +1,8 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var jeet = require('jeet');
+var stylusTypeUtils = require('stylus-type-utils');
 
-console.log(path.join(__dirname, "node_modules"));
 module.exports = {
   context: __dirname,
   entry: './entry.js',
@@ -42,4 +43,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('bundle.css'),
   ],
+
+  stylus: {
+    use: [stylusTypeUtils(), jeet()],
+  },
 };
