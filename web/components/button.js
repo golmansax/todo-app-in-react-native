@@ -12,3 +12,10 @@ export default class Button extends React.Component {
 }
 
 Button.defaultProps = { type: 'main' };
+Button.propTypes = {
+  type: React.PropTypes.oneOf('main', 'outline'),
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.element,
+    React.PropTypes.arrayOf(React.PropTypes.element),
+  ]),
+};
