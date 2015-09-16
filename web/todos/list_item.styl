@@ -1,0 +1,20 @@
+@require jeet
+@require nib
+@require '../stylus_config/_colors';
+
+.listItem {
+  clearfix()
+
+  border: .1em solid $light-grey;
+  border-radius: .5em;
+  padding: 1em;
+  margin-bottom: .5em;
+}
+
+.content {
+  col(3/4);
+}
+
+.actions {
+  col(1/4)
+}

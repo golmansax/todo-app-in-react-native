@@ -6,7 +6,7 @@
     "start-web": "node web/index.js",
     "test": "./node_modules/.bin/jest",
     "watch-ios": "./node_modules/react-native/packager/packager.sh",
-    "watch-web": "./node_modules/.bin/webpack-dev-server --config web/webpack.config.js --content-base web/public/build --progress --colors"
+    "watch-web": "./node_modules/.bin/webpack-dev-server --config web/webpack.config.js --content-base web/public/build --progress --colors --hot --inline"
   },
   "jest": {
     "scriptPreprocessor": "jestSupport/scriptPreprocess.js",
@@ -29,7 +29,9 @@
     "eslint-config-golmansax": "*",
     "http-proxy": "*",
     "jest-cli": "0.4.x",
-    "travis-lint": "*"
+    "react-hot-loader": "*",
+    "travis-lint": "*",
+    "webpack-dev-server": "*"
   },
   "dependencies": {
     "babel": "*",
@@ -41,6 +43,7 @@
     "extract-text-webpack-plugin": "*",
     "file-loader": "*",
     "jeet": "*",
+    "nib": "*",
     "react": "*",
     "react-bootstrap": "*",
     "react-native": "*",
@@ -52,7 +55,6 @@
     "stylus-loader": "*",
     "stylus-type-utils": "*",
     "url-loader": "*",
-    "webpack": "*",
-    "webpack-dev-server": "*"
+    "webpack": "*"
   }
 }

@@ -1,6 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var jeet = require('jeet');
+var nib = require('nib');
 var stylusTypeUtils = require('stylus-type-utils');
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel?optional[]=runtime',
+        loaders: ['react-hot', 'babel?optional[]=runtime'],
       },
       {
         test: /\.styl/,
@@ -28,10 +29,22 @@ module.exports = {
         ),
       },
 
-      { test: /\.woff\d?(\?v=\d+\.\d+\.\d+)?$/,   loader: "url?limit=10000&mimetype=application/font-woff" },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&mimetype=application/octet-stream" },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: "file" },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&mimetype=image/svg+xml" },
+      {
+        test: /\.woff\d?(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=image/svg+xml"
+      },
       //
     ],
   },
@@ -45,6 +58,6 @@ module.exports = {
   ],
 
   stylus: {
-    use: [stylusTypeUtils(), jeet()],
+    use: [stylusTypeUtils(), jeet(), nib()],
   },
 };

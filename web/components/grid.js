@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './grid.styl';
 
-console.log(styles);
-
 export default class Grid extends React.Component {
   render() {
     return (

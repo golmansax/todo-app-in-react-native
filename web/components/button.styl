@@ -1,0 +1,27 @@
+@require nib
+@require '../stylus_config/_colors'
+
+.button {
+  border-radius .5em
+  border .1em transparent solid
+  padding 1em
+  text-align center
+  cursor pointer
+  transition background-color 300ms ease-out
+}
+
+.main {
+  composes button;
+  background-color: $purple
+  color $white
+}
+
+.outline {
+  composes button;
+  border-color: $purple
+  color $purple
+
+  &:hover {
+    background-color rgba($purple, 0.2)
+  }
+}
