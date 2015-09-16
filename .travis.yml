@@ -4,6 +4,7 @@ node_js: '0.12'
 install:
 - npm prune
 - npm install
+- npm update
 script:
 - make travis-lint
 - make eslint
