@@ -31,7 +31,7 @@
    * on the same Wi-Fi network.
    */
 
-  jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/ios/index.bundle"];
+  jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/ios/index.ios.bundle"];
 
   /**
    * OPTION 2
@@ -47,6 +47,7 @@
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"TodoApp"
+                                               initialProperties:nil
                                                    launchOptions:launchOptions];
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

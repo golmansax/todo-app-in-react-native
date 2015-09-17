@@ -7,7 +7,7 @@ var {
   View,
 } = React;
 var Button = require('react-native-button');
-var { getAll } = require('../../shared/todos/store');
+var { getAll } = require('../../../shared/todos/store');
 
 var styles = StyleSheet.create({
   container: {
