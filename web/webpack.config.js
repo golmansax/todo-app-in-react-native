@@ -27,7 +27,7 @@ module.exports = {
         test: /\.styl/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?modules!stylus-loader?paths=node_modules',
+          'css-loader?modules!stylus-loader?paths=node_modules'
         ),
       },
       {
