@@ -3,6 +3,7 @@ import React from 'react';
 export default class Layout extends React.Component {
   render() {
     return (
+      /* eslint-disable max-len */
       <html>
         <head>
           <title>TodoApp</title>
@@ -25,6 +26,7 @@ export default class Layout extends React.Component {
           <script type='text/javascript' src='/build/bundle.js' />
         </body>
       </html>
+      /* eslint-enable max-len */
     );
   }
 }

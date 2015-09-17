@@ -17,3 +17,7 @@ export default class TodosListItem extends React.Component {
     );
   }
 }
+
+TodosListItem.propTypes = {
+  todo: React.PropTypes.object.isRequired,
+};
