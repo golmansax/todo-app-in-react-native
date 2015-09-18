@@ -1,8 +1,14 @@
 import React from 'react';
 import { IconButton, Button } from '../components';
 import styles from './list_item.styl';
+import { remove } from '../../shared/todos/store';
 
 export default class TodosListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this._removeSelf = this._removeSelf.bind(this);
+  }
+
   render() {
     return (
       <div className={styles.listItem}>
@@ -20,7 +26,7 @@ export default class TodosListItem extends React.Component {
   }
 
   _removeSelf() {
-    alert('here');
+    remove(this.props.todo.slug);
   }
 }
 

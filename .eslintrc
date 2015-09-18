@@ -1,3 +1,4 @@
 {
-  "extends": "golmansax/react-native"
+  "extends": "golmansax/react-native",
+  "root": true
 }

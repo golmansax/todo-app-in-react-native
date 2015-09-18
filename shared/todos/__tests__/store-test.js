@@ -1,10 +1,31 @@
 jest.dontMock('../store');
+jest.dontMock('../../utils/slugify');
+
+const SLUG = 'watch-wimbledon-final';
 
 describe('TodosStore', () => {
   describe('.getAll', () => {
     it('returns 2 objects', () => {
-      var TodosStore = require('../store');
+      const TodosStore = require('../store');
       expect(TodosStore.getAll().length).toBe(2);
+    });
+  });
+
+  describe('.update', () => {
+    it('updates data on an object', () => {
+      const TodosStore = require('../store');
+
+      TodosStore.update(SLUG, { completed: true });
+      expect(TodosStore.get(SLUG).completed).toBe(true);
+    });
+  });
+
+  describe('.remove', () => {
+    it('removes an object', () => {
+      const TodosStore = require('../store');
+
+      TodosStore.remove(SLUG);
+      expect(TodosStore.get(SLUG)).toBe(undefined);
     });
   });
 });
