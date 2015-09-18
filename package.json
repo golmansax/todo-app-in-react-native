@@ -42,6 +42,7 @@
     "babel-loader": "*",
     "babel-runtime": "*",
     "bootstrap-styl": "*",
+    "classnames": "*",
     "css-loader": "*",
     "express": "*",
     "extract-text-webpack-plugin": "*",

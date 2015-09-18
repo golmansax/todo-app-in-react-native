@@ -1,17 +1,20 @@
 import React from 'react';
-import Button from '../components/button';
+import { IconButton, Button } from '../components';
 import styles from './list_item.styl';
 
 export default class TodosListItem extends React.Component {
   render() {
+    console.log(styles);
     return (
       <div className={styles.listItem}>
         <div className={styles.content}>
           <h3>{this.props.todo.name}</h3>
         </div>
         <div className={styles.actions}>
+          <div className={styles.removeButtonContainer}>
+            <IconButton icon='times' />
+          </div>
           <Button type='outline'>I completed this!</Button>
-          <Button type='outline'>Remove</Button>
         </div>
       </div>
     );

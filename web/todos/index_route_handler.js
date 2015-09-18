@@ -1,7 +1,7 @@
 import React from 'react';
 import TodosStore from '../../shared/todos/store';
 import TodosListItem from './list_item';
-import Grid from '../components/grid';
+import { Grid } from '../components';
 import styles from './index_route_handler.styl';
 
 export default class TodosIndexRouteHandler extends React.Component {
