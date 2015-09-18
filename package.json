@@ -6,7 +6,7 @@
     "start-web": "node web/index.js",
     "test": "./node_modules/.bin/jest",
     "postinstall": "make link-modules && npm prune",
-    "watch-ios": "./node_modules/react-native/packager/packager.sh",
+    "watch-native": "./node_modules/react-native/packager/packager.sh",
     "watch-web": "./node_modules/.bin/webpack-dev-server --config web/webpack.config.js --content-base web/public/build --progress --colors --hot --inline"
   },
   "jest": {
