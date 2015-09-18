@@ -10,14 +10,13 @@ export default class IconButton extends React.Component {
     });
 
     return (
-      <span className={myClass}>
+      <span {...this.props} className={myClass}>
         <i className={`fa fa-fw fa-${this.props.icon}`} />
       </span>
     );
   }
 }
 
-IconButton.defaultProps = { type: 'main' };
 IconButton.propTypes = {
   icon: React.PropTypes.string.isRequired,
   className: React.PropTypes.string,

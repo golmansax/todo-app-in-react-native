@@ -11,12 +11,16 @@ export default class TodosListItem extends React.Component {
         </div>
         <div className={styles.actions}>
           <div className={styles.removeButtonContainer}>
-            <IconButton icon='times' />
+            <IconButton icon='times' onClick={this._removeSelf} />
           </div>
           <Button type='outline'>I completed this!</Button>
         </div>
       </div>
     );
+  }
+
+  _removeSelf() {
+    alert('here');
   }
 }
 
