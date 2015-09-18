@@ -42,9 +42,8 @@ module.exports.removeChangeListener = (myListener) => {
 module.exports.update = (slug, data) => {
   const todo = get(slug);
 
-  Object.keys(data).forEach((key) => {
-    todo[key] = data[key];
-  });
+  Object.keys(data).forEach((key) => todo[key] = data[key]);
+  emitChange();
 };
 
 module.exports.remove = (slug) => {
