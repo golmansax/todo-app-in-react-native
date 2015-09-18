@@ -4,7 +4,6 @@ import styles from './list_item.styl';
 
 export default class TodosListItem extends React.Component {
   render() {
-    console.log(styles);
     return (
       <div className={styles.listItem}>
         <div className={styles.content}>
