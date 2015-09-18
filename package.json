@@ -34,6 +34,7 @@
     "http-proxy": "*",
     "jest-cli": "0.4.x",
     "react-hot-loader": "*",
+    "stylint": "*",
     "travis-lint": "*",
     "webpack-dev-server": "*"
   },
