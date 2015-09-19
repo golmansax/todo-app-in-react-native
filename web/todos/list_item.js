@@ -18,6 +18,10 @@ export default class TodosListItem extends React.Component {
         <div className={styles.content}>
           <h3>{this.props.todo.name}</h3>
           <p>
+            <strong>Due Date: </strong>
+            {this.props.todo.date}
+          </p>
+          <p>
             <strong>Status: </strong>
             {this._renderStatus()}
           </p>
@@ -43,7 +47,7 @@ export default class TodosListItem extends React.Component {
   _renderCompleteButton() {
     if (this.props.todo.completed) { return null; }
     return (
-      <Button type='outline' onClick={this._markComplete}>
+      <Button icon='check' type='outline' onClick={this._markComplete}>
         I completed this!
       </Button>
     );

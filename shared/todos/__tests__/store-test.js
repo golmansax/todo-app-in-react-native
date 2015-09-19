@@ -28,4 +28,13 @@ describe('TodosStore', () => {
       expect(TodosStore.get(SLUG)).toBe(undefined);
     });
   });
+
+  describe('.add', () => {
+    it('adds an object', () => {
+      const TodosStore = require('../store');
+
+      TodosStore.add({ name: 'Write a test', date: 'Sept 18 2015' });
+      expect(TodosStore.get('write-a-test').date).toBe('Sept 18 2015');
+    });
+  });
 });

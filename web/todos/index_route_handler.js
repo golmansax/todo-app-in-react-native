@@ -1,8 +1,9 @@
 import React from 'react';
 import { getAll, addChangeListener } from '../../shared/todos/store';
 import TodosListItem from './list_item';
-import { Grid } from '../components';
+import { Button, Grid } from '../components';
 import styles from './index_route_handler.styl';
+import { add } from '../../shared/todos/store';
 
 export default class TodosIndexRouteHandler extends React.Component {
   constructor(props) {
@@ -24,7 +25,14 @@ export default class TodosIndexRouteHandler extends React.Component {
     return (
       <div>
         <Grid className={styles.todosList}>
-          <h1>My Todo List</h1>
+          <div className={styles.topbarContainer}>
+            <h1 className={styles.topbarHeading}>My Todo List</h1>
+            <div className={styles.topbarButtonContainer}>
+              <Button type='main' icon='plus' onClick={this._addTodo}>
+                Add a todo
+              </Button>
+            </div>
+          </div>
           {this.state.todos.map(this._renderTodo)}
         </Grid>
       </div>
@@ -37,5 +45,15 @@ export default class TodosIndexRouteHandler extends React.Component {
 
   _reloadTodos() {
     this.setState({ todos: getAll() });
+  }
+
+  _addTodo() {
+    add({
+      name: 'Build real add functionality',
+      date: 'Mar 11 2020',
+      image: 'http://3.bp.blogspot.com/-t9e7S8huhaQ/VBMVN6CbNGI/AAAAAAAAA14/' +
+        '02am46_jiJM/s1600/Big_smile.png',
+      completed: false,
+    });
   }
 }

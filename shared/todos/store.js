@@ -50,3 +50,9 @@ module.exports.remove = (slug) => {
   todos = todos.filter((todo) => todo.slug !== slug);
   emitChange();
 };
+
+module.exports.add = (data) => {
+  data.slug = slugify(data.name);
+  todos.push(data);
+  emitChange();
+};

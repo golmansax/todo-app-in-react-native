@@ -8,12 +8,17 @@
   text-align center
   cursor pointer
   transition background-color 300ms ease-out
+  user-select none
 }
 
 .main {
   composes button;
   background-color: $purple
   color $white
+
+  &:hover {
+    background-color darken($purple, 30%)
+  }
 }
 
 .outline {
@@ -24,4 +29,8 @@
   &:hover {
     background-color rgba($purple, 0.2)
   }
+}
+
+.buttonIcon {
+  margin-right .5em
 }
