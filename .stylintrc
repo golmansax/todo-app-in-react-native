@@ -59,13 +59,10 @@
     "error": true
   },
   "namingConvention": {
-    "expect": "lowercase-dash",
+    "expect": "camelCase",
     "error": true
   },
-  "namingConventionStrict": {
-    "expect": true,
-    "error": true
-  },
+  "namingConventionStrict": true,
   "none": {
     "expect": "never",
     "error": true

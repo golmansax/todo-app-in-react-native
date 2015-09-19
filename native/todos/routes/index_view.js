@@ -7,6 +7,7 @@ var {
   View,
 } = React;
 var Button = require('react-native-button');
+var { colors } = require('../../../shared/styles');
 var { getAll } = require('../../../shared/todos/store');
 
 var styles = StyleSheet.create({
@@ -39,7 +40,7 @@ var styles = StyleSheet.create({
   addButton: {
     flex: 1,
     padding: 10,
-    backgroundColor: 'red',
+    backgroundColor: colors.purple,
     color: 'white',
   },
 });

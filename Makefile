@@ -11,3 +11,4 @@ link-modules:
 
 stylint:
 	./node_modules/.bin/stylint web
+	./node_modules/.bin/stylint shared

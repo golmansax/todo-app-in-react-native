@@ -1,11 +1,11 @@
 @require jeet
 @require nib
-@require '../stylus_config/_colors'
+@require '../../shared/styles/colors'
 
 .listItem {
   clearfix()
 
-  border .1em solid $light-gray
+  border .1em solid $lightGray
   border-radius .5em
   padding 1em
   margin-bottom .5em
@@ -27,9 +27,9 @@
 }
 
 .completeStatus {
-  color green
+  color $green
 }
 
 .incompleteStatus {
-  color red
+  color $red
 }

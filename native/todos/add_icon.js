@@ -4,6 +4,7 @@ var {
   TouchableHighlight,
 } = React;
 var { Icon } = require('react-native-icons');
+var { colors } = require('../../shared/styles');
 var TodoRoutes = require('./routes');
 
 var styles = StyleSheet.create({
@@ -26,7 +27,7 @@ class TodoAddIcon extends React.Component {
         <Icon
           name='fontawesome|plus'
           size={30}
-          color='#3b5998'
+          color={colors.purple}
           style={styles.plus}
         />
       </TouchableHighlight>
