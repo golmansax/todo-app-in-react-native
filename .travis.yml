@@ -4,6 +4,7 @@ node_js: '0.12'
 script:
 - make travis-lint
 - make eslint
+- make stylint
 - npm test
 - npm run build-web
 cache:
