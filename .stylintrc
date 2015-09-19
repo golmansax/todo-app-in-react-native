@@ -2,7 +2,7 @@
   "blocks": false,
   "brackets": {
     "expect": "always",
-    "error": true
+    "error": false
   },
   "colons": {
     "expect": "never",
@@ -112,7 +112,7 @@
   },
   "valid": {
     "expect": true,
-    "error": true
+    "error": false
   },
   "zeroUnits": {
     "expect": "never",

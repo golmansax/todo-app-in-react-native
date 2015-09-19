@@ -2,18 +2,18 @@
 @require '../stylus_config/_colors'
 
 .button {
-  border-radius .5em
   border .1em transparent solid
+  border-radius .5em
+  cursor pointer
   padding 1em
   text-align center
-  cursor pointer
   transition background-color 300ms ease-out
   user-select none
 }
 
 .main {
-  composes button;
-  background-color: $purple
+  composes button
+  background-color $purple
   color $white
 
   &:hover {
@@ -22,12 +22,12 @@
 }
 
 .outline {
-  composes button;
-  border-color: $purple
+  composes button
+  border-color $purple
   color $purple
 
   &:hover {
-    background-color rgba($purple, 0.2)
+    background-color rgba($purple, .2)
   }
 }
 

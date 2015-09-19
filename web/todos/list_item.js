@@ -39,9 +39,9 @@ export default class TodosListItem extends React.Component {
   _renderStatus() {
     if (this.props.todo.completed) {
       return <span className={styles.completeStatus}>Completed!</span>;
-    } else {
-      return <span className={styles.incompleteStatus}>Incomplete</span>;
     }
+
+    return <span className={styles.incompleteStatus}>Incomplete</span>;
   }
 
   _renderCompleteButton() {

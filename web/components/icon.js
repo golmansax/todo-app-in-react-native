@@ -8,7 +8,7 @@ export default class Icon extends React.Component {
       'fa-fw': this.props.fixedWidth,
       [this.props.className]: !!this.props.className,
     });
-    return <i className={myClassName} />
+    return <i className={myClassName} />;
   }
 }
 

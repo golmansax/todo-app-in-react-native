@@ -32,4 +32,5 @@ Button.propTypes = {
     React.PropTypes.arrayOf(React.PropTypes.element),
   ]),
   icon: React.PropTypes.string,
+  className: React.PropTypes.string,
 };
