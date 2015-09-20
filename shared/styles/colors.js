@@ -4,5 +4,5 @@ module.exports = {
   green: 'green',
   red: 'red',
   purple: '#800080',
-  white: '#fff'
+  white: '#fff',
 };
