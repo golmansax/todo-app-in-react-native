@@ -1,5 +1,9 @@
 import React from 'react';
-import { getAll, addChangeListener } from '../../shared/todos/store';
+import {
+  getAll,
+  addChangeListener,
+  removeChangeListener,
+} from '../../shared/todos/store';
 import TodosListItem from './list_item';
 import { Button, Grid } from '../components';
 import styles from './index_route_handler.styl';

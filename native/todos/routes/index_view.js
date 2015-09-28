@@ -8,7 +8,7 @@ var {
 } = React;
 var Button = require('react-native-button');
 var { colors } = require('../../../shared/styles');
-var { getAll } = require('../../../shared/todos/store');
+var { getAll, addChangeListener } = require('../../../shared/todos/store');
 
 var styles = StyleSheet.create({
   container: {
@@ -43,6 +43,15 @@ var styles = StyleSheet.create({
     backgroundColor: colors.purple,
     color: 'white',
   },
+  completeButton: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: colors.purple,
+    color: 'white',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+  },
 });
 
 class TodosIndexView extends React.Component {
@@ -52,24 +61,15 @@ class TodosIndexView extends React.Component {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
       }),
-      loaded: false,
     };
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(getAll()),
-        loaded: true,
-      });
-    }, 500);
+    this._reloadTodos();
+    addChangeListener(this._reloadTodos.bind(this));
   }
 
   render() {
-    if (!this.state.loaded) {
-      return this._renderLoadingView();
-    }
-
     return (
       <View>
         <ListView
@@ -77,9 +77,6 @@ class TodosIndexView extends React.Component {
           renderRow={this._renderTodo}
           style={styles.listView}
         />
-        <Button style={styles.addButton}>
-          Add Todo
-        </Button>
       </View>
     );
   }
@@ -91,17 +88,23 @@ class TodosIndexView extends React.Component {
         <View style={styles.rightContainer}>
           <Text style={styles.name}>{todo.name}</Text>
           <Text style={styles.date}>{todo.date}</Text>
+          <View style={styles.buttonContainer}>
+            <Button style={styles.completeButton}>
+              I completed this!
+            </Button>
+            <Button style={styles.completeButton}>
+              Remove
+            </Button>
+          </View>
         </View>
       </View>
     );
   }
 
-  _renderLoadingView() {
-    return (
-      <View style={styles.container}>
-        <Text>Loading todos...</Text>
-      </View>
-    );
+  _reloadTodos() {
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(getAll()),
+    });
   }
 }
 

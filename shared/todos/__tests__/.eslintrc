@@ -1,3 +1,7 @@
 {
-  "extends": "golmansax"
+  "extends": "golmansax",
+
+  "env": {
+    "jest": true
+  }
 }

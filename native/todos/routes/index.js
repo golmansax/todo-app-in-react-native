@@ -9,7 +9,7 @@ module.exports.index = {
   component: TodoIndexView,
   navBar: (
     <NavBar
-      title='I like Todos'
+      title='My Todo List'
       customNext={<TodoAddIcon />}
     />
   ),

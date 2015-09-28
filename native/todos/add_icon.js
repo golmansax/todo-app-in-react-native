@@ -5,7 +5,7 @@ var {
 } = React;
 var { Icon } = require('react-native-icons');
 var { colors } = require('../../shared/styles');
-var TodoRoutes = require('./routes');
+var { add } = require('../../shared/todos/store');
 
 var styles = StyleSheet.create({
   plus: {
@@ -18,12 +18,12 @@ var styles = StyleSheet.create({
 class TodoAddIcon extends React.Component {
   constructor(props) {
     super(props);
-    this._navigateToAdd = this._navigateToAdd.bind(this);
+    this._addTodo = this._addTodo.bind(this);
   }
 
   render() {
     return (
-      <TouchableHighlight onPress={this._navigateToAdd}>
+      <TouchableHighlight onPress={this._addTodo}>
         <Icon
           name='fontawesome|plus'
           size={30}
@@ -34,8 +34,14 @@ class TodoAddIcon extends React.Component {
     );
   }
 
-  _navigateToAdd() {
-    this.props.navigator.push(TodoRoutes.new);
+  _addTodo() {
+    add({
+      name: 'Build real add functionality',
+      date: 'Mar 11 2020',
+      image: 'http://3.bp.blogspot.com/-t9e7S8huhaQ/VBMVN6CbNGI/AAAAAAAAA14/' +
+        '02am46_jiJM/s1600/Big_smile.png',
+      completed: false,
+    });
   }
 }
 
